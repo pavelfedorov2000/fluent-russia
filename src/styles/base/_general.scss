@@ -1,0 +1,45 @@
+@import './vars';
+@import './mixins';
+@import './fonts';
+@import './null';
+
+.container {
+    max-width: $container + $gap * 2;
+    padding: 0 $gap;
+    margin: 0 auto;
+}
+
+.wrapper {
+    position: relative;
+    overflow-x: hidden;
+    /* @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+        background: #fff;
+        backdrop-filter: blur(31px);
+    } */
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-benween {
+    justify-content: space-between;
+}
+
+.grid {
+    display: grid;
+}
+
+.col-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.col-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.col-2 {
+    grid-template-columns: repeat(2, 1fr)
+}
+
+@import '../components/components';

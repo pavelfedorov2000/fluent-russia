@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {
+"title": "Каталог"
+})
+
+<body>
+
+    <div class="wrapper">
+        @@include('../../blocks/modules/header/_header.html')
+
+        @@include('../../blocks/modules/burger/burger-menu/_burger-menu.html')
+
+        <main class="page catalog">
+            <nav class="breadcrumbs" aria-label="breadcrumbs">
+                <div class="container">
+                    <ol class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="home.html">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span>
+                                Каталог
+                            </span>
+                        </li>
+                    </ol>
+                </div>
+            </nav>
+
+            <div class="catalog__filters"></div>
+
+            <div class="page__wrapper catalog__wrapper">
+                @@include('../../blocks/modules/aside-filters/_aside-filters.html')
+                <div class="catalog__content">
+                    <div class="catalog__cards">
+                        <div class="catalog-card">
+
+                        </div>
+                    </div>
+                    <nav class="pagination" aria-label="pagination">
+                        <ol class="pagination__list">
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link"></a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link"></a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link"></a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link"></a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link"></a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+
+        @@include('../../blocks/modules/popups/_popups.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

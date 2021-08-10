@@ -1,0 +1,17 @@
+.btn {
+    @extend %text-20;
+    text-align: center;
+    border-radius: 5.4rem;
+}
+
+.bg-btn {
+    @extend .btn;
+    background-color: $dark;
+    color: $white;
+    font-weight: 700;
+    padding: 3.85rem;
+}
+
+.border-btn {
+    border: 1px solid rgba(63, 78, 79, 0.77);
+}

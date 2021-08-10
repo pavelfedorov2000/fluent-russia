@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html')
+
+<body>
+
+    <div class="wrapper">
+        @@include('../../blocks/modules/header/_header.html')
+
+        @@include('../../blocks/modules/burger/burger-menu/_burger-menu.html')
+
+        <main class="page">
+            <nav class="breadcrumbs" aria-label="breadcrumbs">
+                <div class="container">
+                    <ol class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="home.html">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span>
+
+                            </span>
+                        </li>
+                    </ol>
+                </div>
+            </nav>
+
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <a href="#tab-1" class="tab tab--active"></a>
+                <a href="#tab-2" class="tab"></a>
+            </div>
+            <div id="tab-1" class="tabs-content tabs-content--active"></div>
+            <div id="tab-2" class="tabs-content"></div>
+
+            <!-- Accordion -->
+            <div class="accordion">
+                <div class="accordion__item">
+                    <h6 class="accordion__item-summary"></h6>
+                    <div class="accordion__item-details"></div>
+                </div>
+            </div>
+
+            <!-- svg-sprite -->
+            <svg class="">
+                <use xlink:href="img/sprite.svg#"></use>
+            </svg>
+
+            <picture>
+                <source media="(min-width: 992px)" srcset="img/dashboards/dashboard-1/dashboard-1-pc.png">
+                            <source media="(min-width: 768px)"
+                                srcset="img/dashboards/dashboard-1/dashboard-1-tablet.png">
+                            <source media="(min-width: 320px)"
+                                srcset="img/dashboards/dashboard-1/dashboard-1-mobile.png">
+                            <img class="opportunities__img" src="img/dashboards/dashboard-1/dashboard-1-pc.png"
+                                alt="Дашборд">
+                        </picture>
+
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+
+        @@include('../../blocks/modules/popups/_popups.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

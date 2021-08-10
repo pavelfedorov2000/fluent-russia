@@ -1,0 +1,27 @@
+.slick {
+    &-dots {
+        position: absolute;
+
+        li {
+            display: inline-block;
+            margin: 0 2.5px;
+        }
+
+        button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            //background: ;
+            padding: 0;
+            font-size: 0;
+        }
+
+        .slick-active button {
+            //background: $accent;
+        }
+    }
+}
+
+.slick-slide {}
+
+.slick-disabled {}

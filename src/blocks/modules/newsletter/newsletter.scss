@@ -1,0 +1,34 @@
+.newsletter {
+
+    padding: 9.5rem 0 14.5rem;
+    background-color: $yellow;
+
+    // .newsletter__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 6rem;
+        line-height: 6.4rem;
+        letter-spacing: 0.01em;
+        color: $dark;
+        margin-bottom: 5.5rem;
+    }
+
+    // .newsletter__form
+
+    &__form {}
+
+    // .newsletter__input
+
+    &__input {
+        display: inline-block;
+        width: 44.8rem;
+    }
+
+    // .newsletter__btn
+
+    &__btn {
+        display: inline-block;
+        width: 32rem;
+    }
+}

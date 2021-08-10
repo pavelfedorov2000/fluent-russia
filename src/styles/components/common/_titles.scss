@@ -1,0 +1,34 @@
+.title {
+    font-weight: 700;
+}
+
+.section-title {
+    @extend .title;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+}
+
+.decor-title {
+    span {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            border-radius: 20rem;
+            transform: rotate(-3deg);
+            background-color: $yellow;
+        }
+    }
+}
+
+.big-title {
+    @extend .decor-title;
+    font-size: 8rem;
+    line-height: 7.7rem;
+    letter-spacing: 0.01em;
+}
+
+.text {
+    @extend %text-24-gray;
+}

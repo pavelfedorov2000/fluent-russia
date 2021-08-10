@@ -1,0 +1,13 @@
+.input {
+    background-color: $white;
+    border-radius: 5.4rem;
+    font-family: 'Inter', sans-serif;
+    @extend %text-24;
+    color: $gray;
+    padding-top: 3.85rem;
+    padding-bottom: 3.85rem;
+
+    &::placeholder {
+        color: $gray;
+    }
+}
