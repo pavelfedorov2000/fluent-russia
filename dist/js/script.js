@@ -1,136 +1,5 @@
 $(function () {
 
-    $('.burger-btn').on('click', function () {
-    $('.burger-btn').toggleClass('burger-btn--active');
-    $('.burger-menu').toggleClass('burger-menu--active');
-});
-
-$('.burger-btn').on('click', function () {
-    $('.burger-btn').addClass('burger-btn--active');
-    $('.burger-menu').addClass('burger-menu--active');
-});
-
-$('.burger-menu__close-btn').on('click', function () {
-    $('.burger-btn').removeClass('burger-btn--active');
-    $('.burger-menu').removeClass('burger-menu--active');
-});
-
-$('.header__menu-link').on('click', function () {
-    $('.burger-menu').removeClass('burger-menu--active');
-}); 
-
-    $('.open-video').magnificPopup({
-    type: 'iframe',
-    preloader: false,
-});
-
-$('.popup-link').magnificPopup({
-    type: 'inline' // к попапу добавить класс mfp-hide // Через кнопку data-mfp-src="#call_me" добавить кнопке
-});
-
-$('.popup-gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-        enabled: true,
-        navigateByImgClick: true,
-        preload: [0, 1]
-    },
-    image: {
-        tError: '<a href="%url%">The image #%curr%</a> could not be loaded',
-    }
-});
-
-    $('.tab').on('click', function (e) {
-    e.preventDefault();
-
-    $($(this).siblings()).removeClass('tab--active');
-    $('.tabs-content').removeClass('tabs-content--active');
-
-    $(this).addClass('tab--active');
-    $($(this).attr('href')).addClass('tabs-content--active');
-
-    //$('.slider').slick('setPosition'); // Инициализация слайдера
-});
-
-    $('.accordion__item-summary').on('click', function () {
-    $(this).parent().siblings().removeClass('accordion__item--active');
-    $(this).parent().siblings().find('div.accordion__item-details').slideUp('300');
-    $(this).parent().toggleClass('accordion__item--active');
-    $(this).next().slideToggle('300');
-});
-
-    $('.slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: '<button class="slider__btn slider__btn--prev"></button>',
-    nextArrow: '<button class="slider__btn slider__btn--next"></button>',
-    dots: true,
-    //centerMode: true,
-    //centerPadding: '60px',
-    //variableWidth: true,
-    //autoplay: true,
-    //autoplaySpeed: 2000,
-    //fade: true,
-    //appendArrows: ,
-    //appendDots: ,
-    //rtl: true,
-    //mobileFirst: true,
-    //rows: 2,
-    //slidesPerRow: 1,
-    responsive: [
-        {
-            //breakpoint: ,
-            settings: {
-
-            }
-        },
-    ]
-});
-
-$(window).on('resize', function (e) {
-        // Переменная, по которой узнаем запущен слайдер или нет.
-        // Храним её в data
-        var init = $(".").data('init-slider');
-        // Если мобильный
-        if (window.innerWidth < 991) {
-            // Если слайдер не запущен
-            if (init != 1) {
-                // Запускаем слайдер и записываем в data init-slider = 1
-                $('.').slick({
-                    slidesToShow: 1,
-                    arrows: false,
-                    dots: true,
-                    variableWidth: true,
-                    responsive: [
-                        {
-                            breakpoint: 575,
-                            settings: {
-                                centerMode: true,
-                            },
-                        }
-                    ]
-                }).data({ 'init-slider': 1 });
-            }
-        }
-        // Если не мобайл
-        else {
-            // Если слайдер запущен
-            if (init == 1) {
-                // Разрушаем слайдер и записываем в data init-slider = 0
-                $('.').slick('unslick').data({ 'init-slider': 0 });
-            }
-        }
-    }).trigger('resize');
-
-    $("a[href^='#']").not('.tab').click(function () {
-    const href = $(this).attr("href");
-    $("html, body").animate({ scrollTop: $(href).offset().top + "px" });
-    return false;
-});
-
     function DynamicAdapt(type) {
     this.type = type;
 }
@@ -284,6 +153,135 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 
 const da = new DynamicAdapt("max");
 da.init();
+
+    $('.burger-btn').on('click', function () {
+    $('.burger-btn').toggleClass('burger-btn--active');
+    $('.header__menu').toggleClass('header__menu--active');
+    $('body').toggleClass('_lock');
+});
+
+$('.header__menu-link').on('click', function () {
+    $('.burger-menu').removeClass('burger-menu--active');
+});
+
+$('.header__menu-item').on('mouseover', function () {
+    $(this).siblings().find('ul.header__menu-sublist').slideUp('300');
+    $(this).siblings().removeClass('header__menu-item--active');
+    $(this).addClass('header__menu-item--active');
+    $(this).find('ul.header__menu-sublist').slideDown('300');
+});
+
+    /* $('.open-video').magnificPopup({
+    type: 'iframe',
+    preloader: false,
+});
+
+$('.popup-link').magnificPopup({
+    type: 'inline' // к попапу добавить класс mfp-hide // Через кнопку data-mfp-src="#call_me" добавить кнопке
+});
+
+$('.popup-gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1]
+    },
+    image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded',
+    }
+});
+
+    $('.tab').on('click', function (e) {
+    e.preventDefault();
+
+    $($(this).siblings()).removeClass('tab--active');
+    $('.tabs-content').removeClass('tabs-content--active');
+
+    $(this).addClass('tab--active');
+    $($(this).attr('href')).addClass('tabs-content--active');
+
+    //$('.slider').slick('setPosition'); // Инициализация слайдера
+});
+
+    $('.accordion__item-summary').on('click', function () {
+    $(this).parent().siblings().removeClass('accordion__item--active');
+    $(this).parent().siblings().find('div.accordion__item-details').slideUp('300');
+    $(this).parent().toggleClass('accordion__item--active');
+    $(this).next().slideToggle('300');
+});
+
+    $('.slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<button class="slider__btn slider__btn--prev"></button>',
+    nextArrow: '<button class="slider__btn slider__btn--next"></button>',
+    dots: true,
+    //centerMode: true,
+    //centerPadding: '60px',
+    //variableWidth: true,
+    //autoplay: true,
+    //autoplaySpeed: 2000,
+    //fade: true,
+    //appendArrows: ,
+    //appendDots: ,
+    //rtl: true,
+    //mobileFirst: true,
+    //rows: 2,
+    //slidesPerRow: 1,
+    responsive: [
+        {
+            //breakpoint: ,
+            settings: {
+
+            }
+        },
+    ]
+});
+
+$(window).on('resize', function (e) {
+        // Переменная, по которой узнаем запущен слайдер или нет.
+        // Храним её в data
+        var init = $(".").data('init-slider');
+        // Если мобильный
+        if (window.innerWidth < 991) {
+            // Если слайдер не запущен
+            if (init != 1) {
+                // Запускаем слайдер и записываем в data init-slider = 1
+                $('.').slick({
+                    slidesToShow: 1,
+                    arrows: false,
+                    dots: true,
+                    variableWidth: true,
+                    responsive: [
+                        {
+                            breakpoint: 575,
+                            settings: {
+                                centerMode: true,
+                            },
+                        }
+                    ]
+                }).data({ 'init-slider': 1 });
+            }
+        }
+        // Если не мобайл
+        else {
+            // Если слайдер запущен
+            if (init == 1) {
+                // Разрушаем слайдер и записываем в data init-slider = 0
+                $('.').slick('unslick').data({ 'init-slider': 0 });
+            }
+        }
+    }).trigger('resize');
+
+    $("a[href^='#']").not('.tab').click(function () {
+    const href = $(this).attr("href");
+    $("html, body").animate({ scrollTop: $(href).offset().top + "px" });
+    return false;
+}); */
 });
 
 

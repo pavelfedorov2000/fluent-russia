@@ -11,20 +11,24 @@ html {
     box-sizing: border-box;
     font-size: calc(100vw / 1920 * 10);
 
-    @media(max-width: 1024px) {
+    /* @media(max-width: 1024px) {
         font-size: calc(100vw / 768 * 10);
-    }
+    } */
 
     /* @media(max-width: 992px) {
         font-size: calc(100vw / 992 * 10);
     } */
 
-    @media(max-width: 768px) {
-        font-size: calc(100vw / 500 * 10);
+    @media(max-width: 992px) {
+        font-size: calc(100vw / 768 * 10);
     }
 
-    @media(max-width: 500px) {
-        font-size: calc(100vw / 320 * 10);
+    @media(max-width: 768px) {
+        font-size: calc(100vw / 375 * 10);
+    }
+
+    @media(max-width: 375px) {
+        //font-size: calc(100vw / 320 * 10);
     }
 }
 
@@ -33,9 +37,13 @@ body {
     padding: 0;
     overflow-x: hidden;
     min-width: 32rem;
-    font-family: 'Neue Machina', serif;
+    font-family: 'Neue Machina';
     font-style: normal;
     font-weight: 400;
+
+    &._lock {
+        overflow-y: hidden;
+    }
 }
 
 h1,

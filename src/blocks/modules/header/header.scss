@@ -1,0 +1,140 @@
+.header {
+
+    padding-top: calc(36 * 100vh / 1150);
+
+    @media(max-width: 992px) {
+        position: relative;
+    }
+
+    // .header__inner
+
+    &__inner {
+        @extend %flex-row-center;
+    }
+
+    // .header__logo
+
+    &__logo {
+        width: 33.8rem;
+
+        @media(max-width: 768px) {
+            width: 18rem;
+        }
+    }
+
+    // .header__menu
+
+    &__menu {
+        @media(max-width: 992px) {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            z-index: 200;
+            width: 50%;
+            height: 100vh;
+            padding: 3rem;
+            background-color: $white;
+            transition: 0.5s left;
+            overflow: auto;
+        }
+
+        @media(max-width: 500px) {
+            width: 75%;
+        }
+
+        &--active {
+            @media (max-width: 992px) {
+                left: 0;
+            }
+        }
+
+        .header__logo {
+            display: none;
+
+            @media(max-width: 992px) {
+                display: block;
+                margin-bottom: 5rem;
+            }
+        }
+    }
+
+    // .header__menu-list
+
+    &__menu-list {}
+
+    // .header__menu-item
+
+    &__menu-item {
+        position: relative;
+        display: inline-block;
+        padding: 1.6rem 1.6rem 2.4rem 1.6rem;
+
+        @media(max-width: 992px) {
+            display: block;
+        }
+
+        &--active {
+            background: #FFF;
+            border-radius: 2.4rem;
+
+            .header__menu-link {
+                svg {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+
+    &__menu-item+&__menu-item {
+        margin-left: 4.8rem;
+
+        @media(max-width: 992px) {
+            margin-left: 0;
+            margin-top: 2rem;
+        }
+    }
+
+    // .header__menu-link
+
+    &__menu-link {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.8rem;
+        line-height: 1.7rem;
+        font-weight: 500;
+        color: $dark;
+        //transition: .3s color;
+
+        svg {
+            margin-left: 0.8rem;
+            transition: .3s transform;
+        }
+
+        /* @media (any-hover: hover) {
+            &:hover {
+                color: $yellow;
+
+                svg path {
+                    stroke: $yellow;
+                }
+            }
+        } */
+    }
+
+    &__menu-sublist {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        li {
+            margin-top: 1.6rem;
+        }
+    }
+
+    &__menu-sublink {
+        @extend %text-16;
+        color: $dark-gray;
+    }
+}

@@ -1,34 +1,71 @@
 .burger-btn {
     display: none;
-    @media (max-width: 991px) {
-        width: 30px;
-        height: 27px;
+
+    @media(max-width: 992px) {
+        position: relative;
+        width: 4rem;
+        height: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
     }
 
+    @media(max-width: 768px) {
+        width: 3.6rem;
+        height: 1.8rem;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        //z-index: -1;
+        @extend %pos-center-x;
+        bottom: -2.8rem;
+        width: 7.6rem;
+        height: 17.5rem;
+        background: rgba(253, 230, 27, 0.24);
+        border-radius: 13.7rem;
+        transition: .3s background;
+
+        @media(max-width: 768px) {
+            width: 6.9rem;
+            height: 10.9rem;
+        }
+
+    }
+
+
+    @media (any-hover: hover) {
+        &:hover {
+            &:before {
+                //background: $pink;
+            }
+        }
+    }
+
     &__item {
         display: block;
         width: 100%;
-        height: 3px;
-        background-color: #fff;
+        height: 0.3rem;
+        background-color: $dark;
         transition: 0.5s all;
     }
 
     &--active {
-        .hamburger-btn__item {
+        .burger-btn__item {
             &:nth-child(1) {
                 transform: rotate(45deg);
-                margin-top: 12px;
+                margin-top: 0.5rem;
             }
+
             &:nth-child(2) {
                 display: none;
             }
+
             &:nth-child(3) {
                 transform: rotate(-45deg);
-                margin-bottom: 12px;
+                margin-bottom: 1rem;
             }
         }
     }

@@ -3,6 +3,10 @@
     padding: 9.5rem 0 14.5rem;
     background-color: $yellow;
 
+    @media(max-width: 992px) {
+        padding: 4rem 0 5rem;
+    }
+
     // .newsletter__title
 
     &__title {
@@ -12,6 +16,12 @@
         letter-spacing: 0.01em;
         color: $dark;
         margin-bottom: 5.5rem;
+
+        @media(max-width: 992px) {
+            font-size: 2.8rem;
+            line-height: 3rem;
+            margin-bottom: 3rem;
+        }
     }
 
     // .newsletter__form
@@ -23,6 +33,12 @@
     &__input {
         display: inline-block;
         width: 44.8rem;
+        padding-right: 10rem;
+
+        @media(max-width: 768px) {
+            width: 100%;
+            padding-right: 2rem;
+        }
     }
 
     // .newsletter__btn
@@ -30,5 +46,12 @@
     &__btn {
         display: inline-block;
         width: 32rem;
+        margin-left: -7rem;
+
+        @media(max-width: 768px) {
+            display: block;
+            width: 24.6rem;
+            margin: 2rem auto 0;
+        }
     }
 }

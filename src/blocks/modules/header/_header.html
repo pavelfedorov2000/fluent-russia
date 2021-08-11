@@ -1,53 +1,66 @@
 <header class="header">
-    <div class="header__top">
-        <div class="container header__top-inner">
-
-        </div>
-    </div>
-    <div class="header__bottom">
-        <div class="container header__bottom-inner">
-
-        </div>
-    </div>
-
     <div class="header__inner container">
-        <svg class="logo">
-            <use xlink:href="img/sprite.svg#logo"></use>
-        </svg>
         <div class="logo header__logo">
             <a class="logo__link" href="#">
-                <img class="logo__img" src="img/logo/header-logo.png" alt="Логотип">
+                <img class="logo__img" src="img/logo/header-logo.svg" alt="Логотип Fluent Skills">
             </a>
         </div>
-        <nav class="menu header__menu">
-            <ul class="menu__list header__menu-list">
-                <li class="menu__item header__menu-item">
-                    <a class="menu__link header__menu-link" href="#">
-
+        <nav class="header__menu">
+            <div class="logo header__logo">
+                <a class="logo__link" href="#">
+                    <img class="logo__img" src="img/logo/header-logo.svg" alt="Логотип Fluent Skills">
+                </a>
+            </div>
+            <ul class="header__menu-list">
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#">
+                        О нас
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L9 1" stroke="#222F3B" />
+                        </svg>
+                    </a>
+                    <ul class="header__menu-sublist">
+                        <li><a href="#" class="header__menu-sublink">Кто мы</a></li>
+                        <li><a href="#" class="header__menu-sublink">Мероприятия</a></li>
+                        <li><a href="#" class="header__menu-sublink">Новости</a></li>
+                    </ul>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#">
+                        Программы обучения
                     </a>
                 </li>
-                <li class="menu__item header__menu-item">
-                    <a class="menu__link header__menu-link" href="#">
-
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#">
+                        База знаний
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L9 1" stroke="#222F3B" />
+                        </svg>
                     </a>
+                    <ul class="header__menu-sublist">
+                        <li><a href="#" class="header__menu-sublink">Блог</a></li>
+                        <li><a href="#" class="header__menu-sublink">Вебинары</a></li>
+                    </ul>
                 </li>
-                <li class="menu__item header__menu-item">
-                    <a class="menu__link header__menu-link" href="#">
-
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#">
+                        Еще
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L9 1" stroke="#222F3B" />
+                        </svg>
                     </a>
-                </li>
-                <li class="menu__item header__menu-item">
-                    <a class="menu__link header__menu-link" href="#">
-
-                    </a>
-                </li>
-                <li class="menu__item header__menu-item">
-                    <a class="menu__link header__menu-link" href="#">
-
-                    </a>
+                    <ul class="header__menu-sublist">
+                        <li><a href="#" class="header__menu-sublink">Онлайн-платформа</a></li>
+                        <li><a href="#" class="header__menu-sublink">Программа Амбассадоров</a></li>
+                        <li><a href="#" class="header__menu-sublink">Свяжитесь с нами</a></li>
+                    </ul>
                 </li>
             </ul>
         </nav>
+        <button class="enter-btn header__enter">
+            <img src="img/enter.svg" alt="иконка входа">
+            Войти
+        </button>
         @@include('../burger/burger-btn/_burger-btn.html')
     </div>
 </header>

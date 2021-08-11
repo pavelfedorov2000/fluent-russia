@@ -1,0 +1,202 @@
+.promo {
+
+    position: relative;
+    z-index: 1;
+    padding-top: 0;
+    padding-bottom: calc(200 * 100vh / 1150);
+    height: 100vh;
+
+    @media(max-width: 992px) {
+        min-height: auto;
+        padding-top: 0;
+    }
+
+    &:before,
+    &:after {
+        position: absolute;
+        z-index: -1;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &:before {
+        content: url(../img/decor-lines/1.svg);
+        //content: '';
+        //background-image: url(../img/decor-lines/1.svg);
+        //width: 50.6rem;
+        //height: 1104 * 100vh / 1150;
+        bottom: 49 * 100vh / 1150;
+
+        @media(max-width: 1200px) {
+            display: none;
+        }
+    }
+
+    &:after {
+        content: '';
+        width: 44.8rem;
+        height: 1048 * 100vh / 1150;
+        //content: url(../img/decor-lines/2.svg);
+        bottom: 105 * 100vh / 1150;
+        right: -2%;
+        background-image: url(../img/decor-lines/2.svg);
+
+        @media(max-width: 1200px) {
+            display: none;
+        }
+    }
+
+    // .promo__img
+
+    &__img {
+        position: absolute;
+        top: 30vh;
+        left: 0;
+        //left: 240 * 100vh / 1150;
+        width: 974 * 100vh / 1150;
+        height: 858 * 100vh / 1150;
+
+        @media(max-width: 992px) {
+            position: static;
+            width: 22.2rem;
+            height: auto;
+            margin-left: -1.2rem;
+        }
+    }
+
+    // .promo__inner
+
+    &__inner {
+        padding-top: 204 * 100vh / 1150;
+        margin-bottom: 180 * 100vh / 1150;
+
+        @media(max-width: 1200px) {
+            margin-bottom: 0;
+        }
+
+        @media(max-width: 992px) {
+            padding-top: 12.5rem;
+            // margin-bottom: 0;
+        }
+    }
+
+    // .promo__title
+
+    &__title {
+        font-size: 178 * 100vh / 1150;
+        line-height: 172 * 100vh / 1150;
+
+        @media(max-width: 992px) {
+            font-size: 8.6rem;
+            line-height: 8.3rem;
+            text-align: center;
+        }
+    }
+
+    // .promo__content
+
+    &__content {
+        max-width: 69.6rem;
+
+        @media(max-width: 992px) {
+            max-width: 100%;
+        }
+    }
+
+    // .promo__slogan
+
+    &__slogan {
+        font-size: 60 * 100vh / 1150;
+        line-height: 72 * 100vh / 1150;
+        letter-spacing: normal;
+        margin-bottom: 32 * 100vh / 1150;
+
+        @media(max-width: 992px) {
+            font-size: 2.8rem;
+            line-height: 3.5rem;
+            display: grid;
+            grid-row-gap: 0.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        span:before {
+            width: 276 * 100vh / 1150;
+            height: 69 * 100vh / 1150;
+            border-radius: 3.3rem;
+            left: -1rem;
+            top: 50%;
+            transform: translateY(-50%) rotate(-3deg);
+
+            @media(max-width: 992px) {
+                width: 15.2rem;
+                height: 4rem;
+            }
+        }
+    }
+
+    // .promo__text
+
+    &__text {
+        font-size: 24 * 100vh / 1150;
+        line-height: 36 * 100vh / 1150;
+        margin-bottom: 72 * 100vh / 1150;
+        color: $gray;
+
+        @media(max-width: 992px) {
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+            margin-bottom: 2.7rem;
+        }
+    }
+
+    // .promo__btn
+
+    &__btn {
+        display: inline-block;
+        padding: 2.65rem 3.12rem;
+
+        @media(max-width: 992px) {
+            width: 26.6rem;
+            padding: 1.8rem 1rem;
+        }
+    }
+
+    // .promo__scroll
+
+    &__scroll {
+        position: relative;
+        width: 20rem;
+        @extend %flex-row-center;
+        text-align: center;
+        margin: 0 auto;
+        font-family: 'Inter', sans-serif;
+        font-size: 18 * 100vh / 1150;
+        line-height: 22 * 100vh / 1150;
+        font-weight: 500;
+        color: $dark-gray;
+
+        @media(max-width: 1200px) {
+            display: none;
+        }
+
+        img {
+            animation-duration: 1.5s;
+            animation-name: scroll;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(1rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

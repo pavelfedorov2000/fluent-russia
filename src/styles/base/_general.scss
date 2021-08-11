@@ -18,12 +18,28 @@
     } */
 }
 
-.flex {
-    display: flex;
+.section {
+    padding: 20rem 0;
+
+    @media(max-width: 992px) {
+        padding: 4rem 0 6rem;
+    }
+
+    &--pink {
+        background-color: $pink-bg;
+    }
+
+    &--white {
+        background-color: $white;
+    }
 }
 
-.justify-benween {
-    justify-content: space-between;
+.section-inner {
+
+    @media(min-width: 992px) {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .grid {

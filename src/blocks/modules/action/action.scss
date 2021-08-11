@@ -1,0 +1,83 @@
+.action {
+
+    position: relative;
+    padding: 8rem 0 10rem;
+    background-color: $yellow;
+
+    &:after {
+        content: url(../img/decor-lines/4.svg);
+        position: absolute;
+        bottom: -13.6rem;
+        right: -0.7rem;
+
+        @media(max-width: 992px) {
+            content: '';
+        }
+    }
+
+    // .action__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 9.6rem;
+        line-height: 9.3rem;
+        letter-spacing: 0.01em;
+        margin-bottom: 4.8rem;
+
+        @media(max-width: 992px) {
+            font-size: 2.8rem;
+            line-height: 2.7rem;
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    // .action__form
+
+    &__form {
+        @media(max-width: 992px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 3rem;
+        }
+
+        @media(max-width: 768px) {
+            display: block;
+        }
+
+        *+* {
+            margin-left: 6.4rem;
+
+            @media(max-width: 992px) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__form-input {
+        @media(max-width: 768px) {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    // .action__form-input
+
+    &__form-input+&__form-input {
+        @media(max-width: 768px) {
+            margin-top: 1.8rem;
+        }
+    }
+
+    // .action__form-btn
+
+    &__form-btn {
+        @media(max-width: 992px) {
+            min-width: auto;
+            width: 100%;
+        }
+
+        @media(max-width: 768px) {
+            margin-top: 3rem;
+        }
+    }
+}

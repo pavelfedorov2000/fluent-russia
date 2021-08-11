@@ -1,8 +1,10 @@
 $(function () {
 
+    @@include('dinamic-adapt.js')
+
     @@include('../blocks/modules/burger/burger.js')
 
-    @@include('../blocks/modules/popups/popups.js')
+    /* @@include('../blocks/modules/popups/popups.js')
 
     @@include('tabs.js')
 
@@ -10,9 +12,7 @@ $(function () {
 
     @@include('sliders.js')
 
-    @@include('scroll.js')
-
-    @@include('dinamic-adapt.js')
+    @@include('scroll.js') */
 });
 
 

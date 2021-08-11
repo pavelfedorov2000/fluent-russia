@@ -5,13 +5,61 @@
 }
 
 .bg-btn {
+    min-width: 32rem;
     @extend .btn;
     background-color: $dark;
     color: $white;
     font-weight: 700;
-    padding: 3.85rem;
+    padding: 2.65rem 1rem;
+    transition: .3s background-color;
+
+    @media(max-width: 992px) {
+        min-width: 24.6rem;
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $dark-gray;
+        }
+    }
 }
 
 .border-btn {
-    border: 1px solid rgba(63, 78, 79, 0.77);
+    border-width: 0.1rem;
+    border-style: solid;
+    //border: 0.1rem solid rgba(63, 78, 79, 0.77);
+    transition: .3s all;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.enter-btn {
+    width: 16rem;
+    height: 7.2rem;
+    border-radius: 7.2rem;
+    background-color: transparent;
+    @extend %flex-center;
+    font-size: 1.8rem;
+    line-height: 1.7rem;
+    font-weight: 700;
+    transition: .3s background-color;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $yellow;
+        }
+    }
+
+    img {
+        display: inline-block;
+        margin-right: 2rem;
+    }
 }
