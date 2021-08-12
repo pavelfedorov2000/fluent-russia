@@ -58,4 +58,15 @@
     grid-template-columns: repeat(2, 1fr)
 }
 
+.ticker {
+    background-color: $yellow;
+    font-weight: bold;
+    font-size: 9.6rem;
+    line-height: 9.3rem;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: $dark;
+    //transform: rotate(-3deg);
+}
+
 @import '../components/components';

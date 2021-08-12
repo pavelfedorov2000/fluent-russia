@@ -1,27 +1,54 @@
-<div class="catalog__aside-filters aside-filters">
+<div class="catalog__filters aside-filters">
+    <h2 class="section-title catalog__title">
+        Все программы<br>
+        обучения
+    </h2>
     <form class="aside-filters__form" action="#">
-        <button class="aside-filters__close-btn"></button>
+        <!-- <button class="aside-filters__close-btn"></button> -->
+        <!-- <fieldset class="aside-filters__item">
+            <label class="aside-filters__item-title">
+                Скоро стартуют
+            </label>
+            <div class="toggle-check">
+                <input type="checkbox" name="start" value="soon">
+                <input type="checkbox" name="start" value="not-soon" checked>
+            </div>
+        </fieldset> -->
         <fieldset class="aside-filters__item">
-            <legend class="aside-filters__item-title"></legend>
+            <legend class="aside-filters__item-title">Стоимость</legend>
             <label class="aside-filters__item-label">
-                <input class="filter-style" type="checkbox" checked>
+                <input class="radio-box" type="radio" name="cost" value="all" checked>
+                <span class="radio-style"></span>
+                <span class="radio-text">Все</span>
             </label>
             <label class="aside-filters__item-label">
-                <input class="filter-style" type="checkbox">
+                <input class="radio-box" type="radio" name="cost" value="paid">
+                <span class="radio-style"></span>
+                <span class="radio-text">Платные</span>
             </label>
             <label class="aside-filters__item-label">
-                <input class="filter-style" type="checkbox">
+                <input class="radio-box" type="radio" name="cost" value="free">
+                <span class="radio-style"></span>
+                <span class="radio-text">Бесплатные</span>
             </label>
         </fieldset>
         <fieldset class="aside-filters__item">
-            <legend class="aside-filters__item-title"></legend>
-            <input class="js-range-slider" type="range" name="price_range" value="" data-min="0" data-max="99999"
-                data-from="0">
+            <legend class="aside-filters__item-title">Вид обучения</legend>
+            <label class="aside-filters__item-label">
+                <input class="radio-box" type="radio" name="education_type" value="all" checked>
+                <span class="radio-style"></span>
+                <span class="radio-text">Все</span>
+            </label>
+            <label class="aside-filters__item-label">
+                <input class="radio-box" type="radio" name="education_type" value="course">
+                <span class="radio-style"></span>
+                <span class="radio-text">Курс</span>
+            </label>
+            <label class="aside-filters__item-label">
+                <input class="radio-box" type="radio" name="education_type" value="vebinar">
+                <span class="radio-style"></span>
+                <span class="radio-text">Вебинар</span>
+            </label>
         </fieldset>
-
-        <div class="aside-filters__buttons">
-            <button class="btn aside-filters__reset-btn" type="reset">Сбросить</button>
-            <button class="btn aside-filters__submit-btn" type="submit"></button>
-        </div>
     </form>
 </div>

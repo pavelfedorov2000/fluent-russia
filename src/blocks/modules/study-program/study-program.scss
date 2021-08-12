@@ -71,17 +71,15 @@
 
     &__cards {
         @extend %flex-row;
+        flex-wrap: wrap;
         margin: 8rem 0 4rem;
 
         @media(max-width: 992px) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 4rem;
+            grid-row-gap: 4rem;
+            //display: grid;
+            //grid-template-columns: repeat(2, 1fr);
+            //grid-gap: 4rem;
             margin: 5rem 0;
-        }
-
-        @media(max-width: 500px) {
-            grid-template-columns: 1fr;
         }
 
         @media(max-width: 500px) {
@@ -106,7 +104,7 @@
     // .study-program__card
 
     &__card {
-        width: 44.8rem;
+        width: 44.8rem / $container * 100%;
         background-color: #fff;
         padding: 0 1.2rem 4.8rem;
         @extend %flex-col-center;
@@ -114,7 +112,11 @@
         border-radius: 3.2rem;
 
         @media(max-width: 992px) {
-            width: auto;
+            width: 47%;
+        }
+
+        @media(max-width: 768px) {
+            width: 100%;
         }
     }
 
@@ -194,15 +196,9 @@
     // .study-card__title
 
     &__title {
-        font-size: 2.4rem;
-        line-height: 2.6rem;
-        font-weight: 500;
-        color: $dark;
         margin-bottom: 1.6rem;
 
         @media(max-width: 992px) {
-            font-size: 1.8rem;
-            line-height: 1.9rem;
             margin-bottom: 2rem;
         }
     }
@@ -210,12 +206,10 @@
     // .study-card__duration
 
     &__duration {
-        background-color: $pink;
         padding: 0.8rem 1.6rem;
         border-radius: 4.8rem;
         @extend %text-16;
         font-weight: 500;
-        color: $dark;
         margin-bottom: 2.4rem;
 
         @media(max-width: 992px) {
@@ -229,7 +223,6 @@
     // .study-card__text
 
     &__text {
-        @extend %text-16-gray;
         margin-bottom: 4rem;
 
         @media(max-width: 992px) {
@@ -242,23 +235,11 @@
     // .study-card__btn
 
     &__btn {
-        display: inline-block;
-        @extend %text-16;
-        font-weight: 700;
-        color: $dark;
-        padding: 1.85rem 3.2rem;
-        border-color: #000;
+
 
         @media(max-width: 992px) {
             line-height: 2.5rem;
             padding: 1.2rem 3.45rem;
-        }
-
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: #000;
-                color: #fff;
-            }
         }
     }
 }

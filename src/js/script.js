@@ -4,6 +4,8 @@ $(function () {
 
     @@include('../blocks/modules/burger/burger.js')
 
+    @@include('../blocks/modules/catalog/catalog.js')
+
     /* @@include('../blocks/modules/popups/popups.js')
 
     @@include('tabs.js')

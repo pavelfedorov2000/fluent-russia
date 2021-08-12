@@ -1,0 +1,160 @@
+.promo-catalog {
+
+    background-color: $white;
+    padding-bottom: 14rem;
+    /* background-image: url(../img/promo-catalog-chel.png);
+    background-size: 61rem 69.7rem;
+    background-position-x: 86.2%;
+    background-position-y: 12.1rem;
+    background-repeat: no-repeat; */
+
+    &__inner {
+        padding-top: 5rem;
+
+        @media(min-width: 992px) {
+            display: flex;
+        }
+    }
+
+    // .promo-catalog__title
+
+    &__title {
+        margin-top: 12rem;
+
+        span {
+            margin-left: 24.8rem;
+
+            &:before {
+                width: 74.1rem;
+                height: 12rem;
+                left: -7.2rem;
+                top: 2rem;
+            }
+        }
+    }
+
+    &__img {
+        width: 61rem;
+        height: 69.7rem;
+        margin-left: -5rem;
+    }
+}
+
+
+.categories {
+    // .categories__title
+
+    &__title {
+        margin-bottom: 8rem;
+        color: rgba($dark, .5);
+    }
+
+    // .categories__big-title
+
+    &__big-title {
+        div {
+            margin-left: 24.8rem;
+        }
+
+        span {
+            &:before {
+                width: 74.1rem;
+                height: 12rem;
+                top: -2rem;
+                right: -2.7rem;
+            }
+        }
+    }
+
+    // .categories__items
+
+    &__items {
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 4.8rem;
+        margin-top: 12rem;
+    }
+
+    // .categories__item
+
+    &__item {
+        position: relative;
+        grid-column: span 2;
+        min-height: 28rem;
+        padding: 4rem 4.8rem;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            grid-column: span 3;
+        }
+
+        &:nth-child(1) {
+            .categories {
+                &__item-img {
+                    width: 40.9rem;
+                    height: 40.9rem;
+                    top: -3.1rem;
+                    right: 0.3rem;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            .categories {
+                &__item-img {
+                    width: 34.8rem;
+                    height: 34.8rem;
+                    bottom: -2rem;
+                    right: 0;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            .categories {
+                &__item-img {
+                    width: 44.3rem;
+                    height: 44.3rem;
+                    @extend %pos-center-y;
+                    right: -14.6rem;
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            .categories {
+                &__item-img {
+                    width: 49.8rem;
+                    height: 28.1rem;
+                    top: 4rem;
+                    left: 9.8rem;
+                }
+            }
+        }
+
+        &:nth-child(5) {
+            .categories {
+                &__item-img {
+                    width: 36.3rem;
+                    height: 36.3rem;
+                    top: -2.7rem;
+                    right: -11.2rem;
+                }
+            }
+        }
+    }
+
+    // .categories__item-title
+
+    &__item-title {
+        font-size: 4rem;
+        line-height: 3.9rem;
+        font-weight: 500;
+        color: $dark;
+    }
+
+    // .categories__item-img
+
+    &__item-img {
+        position: absolute;
+    }
+}

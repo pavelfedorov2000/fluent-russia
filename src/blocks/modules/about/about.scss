@@ -41,7 +41,10 @@
 
             @media(max-width: 992px) {
                 width: 23.7rem;
+                height: 3.5rem;
                 right: -1rem;
+                top: 0;
+                transform: rotate(-3deg);
             }
         }
 
@@ -63,7 +66,7 @@
 
     &__text {
         @media(max-width: 992px) {
-            width: 246 / 375 * 100%;
+            width: 72%;
             margin-left: auto;
         }
 
@@ -90,8 +93,6 @@
     // .about__card
 
     &__card {
-        background-color: #fff;
-        border-radius: 3.2rem;
         padding: 1.5rem 4.5rem 4rem 3.2rem;
 
         @media(max-width: 992px) {
@@ -127,13 +128,10 @@
 
     &__title {
         display: inline-block;
-        background-color: $pink;
         border-radius: 9.5rem;
         font-size: 2.4rem;
         line-height: 2.3rem;
         font-weight: 500;
-        color: $dark;
-        text-align: center;
         padding: 1.6rem 2.4rem;
         margin-bottom: 2.4rem;
 
@@ -148,7 +146,6 @@
     // .about-card__text
 
     &__text {
-        @extend %text-16-gray;
 
         @media(max-width: 992px) {
             font-size: 1.2rem;

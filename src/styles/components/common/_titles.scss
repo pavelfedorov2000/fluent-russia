@@ -15,7 +15,12 @@
     position: relative;
     z-index: 10;
 
-    span {
+    .no-decor {
+        position: relative;
+        z-index: 3;
+    }
+
+    .decor {
         position: relative;
         z-index: 2;
         display: inline-block;
@@ -59,4 +64,12 @@
     color: $dark-gray;
     text-transform: uppercase;
     grid-row-gap: 1.6rem;
+}
+
+.big-page-title {
+    @extend .big-title;
+    font-size: 14.4rem;
+    line-height: 13.9rem;
+    text-transform: uppercase;
+    color: $dark;
 }

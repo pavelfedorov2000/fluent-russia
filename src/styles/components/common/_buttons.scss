@@ -42,19 +42,50 @@
 }
 
 .enter-btn {
+    position: relative;
     width: 16rem;
     height: 7.2rem;
-    border-radius: 7.2rem;
+    //border-radius: 7.2rem;
     background-color: transparent;
     @extend %flex-center;
     font-size: 1.8rem;
     line-height: 1.7rem;
     font-weight: 700;
-    transition: .3s background-color;
+
+    //transition: .3s background-color;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 0%;
+        height: 100%;
+        border-radius: 7.2rem;
+        background-color: $yellow;
+        transition: .3s width;
+
+        @media(max-width: 992px) {
+            display: none;
+        }
+    }
+
+    @media(max-width: 992px) {
+        border-radius: 7.2rem;
+        background-color: $yellow;
+    }
+
+    @media(max-width: 768px) {
+        height: 5rem;
+        font-size: 1.6rem;
+    }
 
     @media (any-hover: hover) {
-        &:hover {
-            background-color: $yellow;
+        &:hover:before {
+            width: 100%;
+            //background-color: $yellow;
         }
     }
 

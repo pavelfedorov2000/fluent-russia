@@ -12,13 +12,15 @@
                 </a>
             </div>
             <ul class="header__menu-list">
-                <li class="header__menu-item">
+                <li class="header__menu-item header__menu-item--drop">
                     <a class="header__menu-link" href="#">
                         О нас
+                    </a>
+                    <div class="header__menu-drop">
                         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L5 5L9 1" stroke="#222F3B" />
                         </svg>
-                    </a>
+                    </div>
                     <ul class="header__menu-sublist">
                         <li><a href="#" class="header__menu-sublink">Кто мы</a></li>
                         <li><a href="#" class="header__menu-sublink">Мероприятия</a></li>
@@ -30,25 +32,29 @@
                         Программы обучения
                     </a>
                 </li>
-                <li class="header__menu-item">
+                <li class="header__menu-item header__menu-item--drop">
                     <a class="header__menu-link" href="#">
                         База знаний
+                    </a>
+                    <div class="header__menu-drop">
                         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L5 5L9 1" stroke="#222F3B" />
                         </svg>
-                    </a>
+                    </div>
                     <ul class="header__menu-sublist">
                         <li><a href="#" class="header__menu-sublink">Блог</a></li>
                         <li><a href="#" class="header__menu-sublink">Вебинары</a></li>
                     </ul>
                 </li>
-                <li class="header__menu-item">
+                <li class="header__menu-item header__menu-item--drop">
                     <a class="header__menu-link" href="#">
                         Еще
+                    </a>
+                    <div class="header__menu-drop">
                         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L5 5L9 1" stroke="#222F3B" />
                         </svg>
-                    </a>
+                    </div>
                     <ul class="header__menu-sublist">
                         <li><a href="#" class="header__menu-sublink">Онлайн-платформа</a></li>
                         <li><a href="#" class="header__menu-sublink">Программа Амбассадоров</a></li>
@@ -57,7 +63,7 @@
                 </li>
             </ul>
         </nav>
-        <button class="enter-btn header__enter">
+        <button class="enter-btn header__enter" data-da=".header__menu, 768, last">
             <img src="img/enter.svg" alt="иконка входа">
             Войти
         </button>

@@ -1,41 +1,44 @@
 .aside-filters {
+
     // .aside-filters__form
 
     &__form {
-    }
-
-    // .aside-filters__close-btn
-
-    &__close-btn {
+        margin-top: 3.7rem;
     }
 
     // .aside-filters__item
 
     &__item {
+        border-bottom: 0.1rem solid $dark-gray;
+        padding-bottom: 3.2rem;
+    }
+
+    &__item {
+        margin-top: 3.2rem;
     }
 
     // .aside-filters__item-title
 
     &__item-title {
+        font-size: 1.8rem;
+        line-height: 1.7rem;
+        font-weight: 700;
+        padding: 0;
+        margin-bottom: 2rem;
     }
 
     // .aside-filters__item-label
 
     &__item-label {
+        display: flex;
+        align-items: center;
+        font-family: "Inter", sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: $dark-gray;
     }
 
-    // .aside-filters__buttons
-
-    &__buttons {
-    }
-
-    // .aside-filters__reset-btn
-
-    &__reset-btn {
-    }
-
-    // .aside-filters__submit-btn
-
-    &__submit-btn {
+    &__item-label+&__item-label {
+        margin-top: 2rem;
     }
 }

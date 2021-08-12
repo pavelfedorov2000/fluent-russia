@@ -7,7 +7,7 @@
     height: 100vh;
 
     @media(max-width: 992px) {
-        min-height: auto;
+        height: auto;
         padding-top: 0;
     }
 
@@ -37,7 +37,7 @@
         width: 44.8rem;
         height: 1048 * 100vh / 1150;
         //content: url(../img/decor-lines/2.svg);
-        bottom: 105 * 100vh / 1150;
+        bottom: 4vh;
         right: -2%;
         background-image: url(../img/decor-lines/2.svg);
 
@@ -67,8 +67,10 @@
     // .promo__inner
 
     &__inner {
-        padding-top: 204 * 100vh / 1150;
-        margin-bottom: 180 * 100vh / 1150;
+        position: relative;
+        z-index: 1;
+        padding-top: 200 * 100vh / 1150;
+        margin-bottom: 120 * 100vh / 1150;
 
         @media(max-width: 1200px) {
             margin-bottom: 0;
