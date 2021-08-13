@@ -1,0 +1,59 @@
+.course-auditory {
+
+    position: relative;
+
+    &:after {
+        content: url(../img/decor-lines/who-decor.svg);
+        position: absolute;
+        top: 11.2rem;
+        left: 0;
+
+    }
+
+    // .course-auditory__title
+
+    &__title {
+        .decor:before {
+            width: 29rem;
+            left: -3.6rem;
+            top: -1.7rem;
+        }
+    }
+
+    // .course-auditory__cards
+
+    &__cards {
+        grid-gap: 4.8rem;
+    }
+
+    // .course-auditory__card
+
+    &__card {
+        min-height: 33.6rem;
+        padding: 2.8rem 3rem 2rem;
+    }
+
+    // .course-auditory__card-img
+
+    &__card-img {
+        width: 22.5rem;
+        height: 14.9rem;
+        margin: 0 auto 4.3rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .course-auditory__card-text
+
+    &__card-text {
+        font-family: 'Inter', sans-serif;
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        color: $dark;
+        text-align: center;
+    }
+}

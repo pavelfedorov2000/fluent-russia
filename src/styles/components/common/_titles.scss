@@ -2,12 +2,16 @@
     font-size: 3.2rem;
     line-height: 3.6rem;
     font-weight: 500;
-    color: $dark-gray;
+    color: $gray;
     text-transform: uppercase;
 
     @media(max-width: 992px) {
         font-size: 1.8rem;
         line-height: 2.3rem;
+    }
+
+    &--dark {
+        color: $dark;
     }
 }
 
@@ -18,6 +22,7 @@
     .no-decor {
         position: relative;
         z-index: 3;
+        white-space: nowrap;
     }
 
     .decor {
@@ -28,12 +33,9 @@
         &:before {
             content: '';
             position: absolute;
-            //top: 50%;
-            //left: 50%;
             z-index: -1;
             height: 10rem;
             border-radius: 20rem;
-            //transform: translate(-50%, -50%) rotate(-3deg);
             transform: rotate(-3deg);
             background-color: $yellow;
 
@@ -66,10 +68,11 @@
     grid-row-gap: 1.6rem;
 }
 
-.big-page-title {
+.page-title {
     @extend .big-title;
     font-size: 14.4rem;
     line-height: 13.9rem;
     text-transform: uppercase;
     color: $dark;
+    margin-bottom: 8rem;
 }

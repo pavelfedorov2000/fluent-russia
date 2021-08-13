@@ -216,50 +216,14 @@ $('.catalog__item').each(function(index){
     });
 });
 
-    /* $('.open-video').magnificPopup({
-    type: 'iframe',
-    preloader: false,
-});
-
-$('.popup-link').magnificPopup({
-    type: 'inline' // к попапу добавить класс mfp-hide // Через кнопку data-mfp-src="#call_me" добавить кнопке
-});
-
-$('.popup-gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-        enabled: true,
-        navigateByImgClick: true,
-        preload: [0, 1]
-    },
-    image: {
-        tError: '<a href="%url%">The image #%curr%</a> could not be loaded',
-    }
-});
-
-    $('.tab').on('click', function (e) {
-    e.preventDefault();
-
-    $($(this).siblings()).removeClass('tab--active');
-    $('.tabs-content').removeClass('tabs-content--active');
-
-    $(this).addClass('tab--active');
-    $($(this).attr('href')).addClass('tabs-content--active');
-
-    //$('.slider').slick('setPosition'); // Инициализация слайдера
-});
-
     $('.accordion__item-summary').on('click', function () {
-    $(this).parent().siblings().removeClass('accordion__item--active');
+    $(this).parent().siblings().find('.accordion__item-summary').removeClass('accordion__item-summary--active');
     $(this).parent().siblings().find('div.accordion__item-details').slideUp('300');
-    $(this).parent().toggleClass('accordion__item--active');
+    $(this).toggleClass('accordion__item-summary--active');
     $(this).next().slideToggle('300');
 });
 
-    $('.slider').slick({
+    /* $('.slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: '<button class="slider__btn slider__btn--prev"></button>',
@@ -326,6 +290,42 @@ $(window).on('resize', function (e) {
     const href = $(this).attr("href");
     $("html, body").animate({ scrollTop: $(href).offset().top + "px" });
     return false;
+});
+
+    $('.open-video').magnificPopup({
+    type: 'iframe',
+    preloader: false,
+});
+
+$('.popup-link').magnificPopup({
+    type: 'inline' // к попапу добавить класс mfp-hide // Через кнопку data-mfp-src="#call_me" добавить кнопке
+});
+
+$('.popup-gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1]
+    },
+    image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded',
+    }
+});
+
+    $('.tab').on('click', function (e) {
+    e.preventDefault();
+
+    $($(this).siblings()).removeClass('tab--active');
+    $('.tabs-content').removeClass('tabs-content--active');
+
+    $(this).addClass('tab--active');
+    $($(this).attr('href')).addClass('tabs-content--active');
+
+    //$('.slider').slick('setPosition'); // Инициализация слайдера
 }); */
 });
 

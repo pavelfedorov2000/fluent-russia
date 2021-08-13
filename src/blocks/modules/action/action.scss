@@ -5,7 +5,7 @@
     background-color: $yellow;
 
     &:after {
-        content: url(../img/decor-lines/4.svg);
+        //content: url(../img/decor-lines/4.svg);
         position: absolute;
         bottom: -13.6rem;
         right: -0.7rem;
@@ -34,26 +34,23 @@
     // .action__form
 
     &__form {
-        @media(max-width: 992px) {
+        @extend %flex-row;
+        //grid-template-columns: repeat(3, 1fr) 32rem;
+        //grid-gap: 3.3rem;
+        /* @media(max-width: 992px) {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 3rem;
-        }
+        } */
 
         @media(max-width: 768px) {
             display: block;
         }
-
-        *+* {
-            margin-left: 6.4rem;
-
-            @media(max-width: 992px) {
-                margin-left: 0;
-            }
-        }
     }
 
     &__form-input {
+        width: 34rem;
+
         @media(max-width: 768px) {
             width: 100%;
             display: block;

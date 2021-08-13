@@ -7,6 +7,10 @@
 // ============= HOME-PAGE ============== //
 @import 'modules/promo/promo';
 @import 'modules/study-program/study-program';
+@import 'modules/future-courses/future-courses';
+@import 'modules/order/order';
+@import 'modules/why/why';
+@import 'modules/study-process/study-process';
 @import 'modules/action/action';
 @import 'modules/about/about';
 @import 'modules/clients/clients';
@@ -14,6 +18,9 @@
 @import 'modules/newsletter/newsletter';
 //@import 'modules/benefits/benefits';
 //@import 'modules/services/services';
+
+
+@import 'modules/vebinars/vebinars';
 
 //@import 'modules/prices/prices';
 
@@ -23,5 +30,12 @@
 @import 'modules/catalog/catalog';
 @import 'modules/aside-filters/aside-filters';
 
-// ============= PRODUCT-CARD-PAGE ============== //
+// ============= COURSE-PAGE ============== //
 //@import 'modules/product-card/product-card';
+@import 'modules/promo-course/promo-course';
+@import 'modules/actuality/actuality';
+@import 'modules/course-auditory/course-auditory';
+@import 'modules/course-program/course-program';
+@import 'modules/course-auditory/course-auditory';
+@import 'modules/skills/skills';
+@import 'modules/course-speaker/course-speaker';

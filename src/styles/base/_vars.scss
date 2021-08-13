@@ -19,7 +19,7 @@ $white: #FDF5F5;
 //$second-font: , sans-serif;
 
 $container: 144rem;
-$gap: 2rem;
+$gap: 4.8rem;
 
 // Typography
 %text-12 {
@@ -41,6 +41,10 @@ $gap: 2rem;
         line-height: 2.4rem;
     }
 }
+
+/* %text-16-inter {
+    @extend %text-16;
+} */
 
 %text-16-gray {
     @extend %text-16;

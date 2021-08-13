@@ -1,0 +1,15 @@
+.course-program {
+
+    // .course-program__title
+
+    &__title {
+        margin-bottom: 8rem;
+
+        .decor:before {
+            width: 24.9rem;
+            height: 12rem;
+            left: -4.8rem;
+            top: -2.5rem;
+        }
+    }
+}

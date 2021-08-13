@@ -1,0 +1,234 @@
+.vebinars {
+
+    padding-bottom: 32rem;
+
+    // .vebinars__text
+
+    &__text {
+        width: 94.5rem;
+        margin-right: 0;
+        margin-left: auto;
+        @extend %text-24-gray;
+        margin-bottom: 8rem;
+    }
+
+    // .vebinars__filters
+
+    &__filters {
+        width: 37.2rem;
+        //width: 36.2rem;
+    }
+
+    &__cards {
+        @extend %flex-row;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
+
+        @media(max-width: 992px) {
+            grid-row-gap: 4rem;
+            //display: grid;
+            //grid-template-columns: repeat(2, 1fr);
+            //grid-gap: 4rem;
+            margin: 5rem 0;
+        }
+
+        @media(max-width: 500px) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__cards-col {
+        @media(max-width: 992px) {
+            display: none;
+        }
+    }
+
+    &__card+&__card {
+        margin-top: $gap;
+
+        @media(max-width: 992px) {
+            margin-top: 0;
+        }
+    }
+
+    // .study-program__card
+
+    &__card {
+        width: 44.8rem;
+        background-color: #fff;
+        padding: 0 1.2rem $gap;
+        @extend %flex-col-center;
+        text-align: center;
+        border-radius: 3.2rem;
+
+        @media(max-width: 992px) {
+            width: 47%;
+        }
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    // .study-program__btn
+
+    &__btn {
+        width: 28rem;
+        display: block;
+        border-color: $gray;
+        font-size: 2rem;
+        line-height: 2.6rem;
+        font-weight: 700;
+        color: $gray;
+        padding: 2.2rem 1.5rem;
+        margin: 0 auto;
+
+        @media(max-width: 500px) {
+            display: none;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $gray;
+            }
+        }
+    }
+}
+
+.vebinar-card {
+
+    &--1 {
+        padding-top: 3.3rem;
+
+        .study-card__img {
+            margin-bottom: 3.3rem;
+        }
+    }
+
+    &--3 {
+        padding-top: 1.1rem;
+
+        .study-card__img {
+            margin-bottom: 0.7rem;
+        }
+    }
+
+    &--4 {
+        padding-top: 1.8rem;
+
+        .study-card__img {
+            margin-bottom: -3.7rem;
+        }
+    }
+
+    &--5 {
+        padding-top: 3.5rem;
+
+        .study-card__img {
+            margin-bottom: 3.7rem;
+        }
+    }
+
+    &--6 {
+        padding-top: 4.1rem;
+
+        .study-card__img {
+            margin-bottom: 2.8rem;
+        }
+    }
+
+    // .study-card__img
+
+    &__img {
+        margin-bottom: 1rem;
+    }
+
+    // .study-card__title
+
+    &__title {
+        margin-bottom: 1.6rem;
+
+        @media(max-width: 992px) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    // .study-card__duration
+
+    &__duration {
+        padding: 0.8rem 1.6rem;
+        border-radius: 4.8rem;
+        @extend %text-16;
+        font-weight: 500;
+        margin-bottom: 2.4rem;
+
+        @media(max-width: 992px) {
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            line-height: 2.1rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    // .study-card__text
+
+    &__text {
+        margin-bottom: 4rem;
+
+        @media(max-width: 992px) {
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    // .study-card__btn
+
+    &__btn {
+
+
+        @media(max-width: 992px) {
+            line-height: 2.5rem;
+            padding: 1.2rem 3.45rem;
+        }
+    }
+}
+
+.vebinars-filters {
+
+    // .vebinars-filters__item
+
+    &__item+&__item {
+        margin-top: 8rem;
+    }
+
+    // .vebinars-filters__item-title
+
+    &__item-title {
+        margin-bottom: 4rem;
+    }
+}
+
+.aside-checks {
+    display: flex;
+    flex-direction: column;
+
+    &--row {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .vebinars-filters {
+            &__item-check {
+                margin-right: 1.6rem;
+            }
+        }
+    }
+
+    &__item {
+        margin-bottom: 1.6rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

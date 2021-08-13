@@ -20,60 +20,28 @@
 
     &__title {
         margin-top: 12rem;
-
-        span {
-            margin-left: 24.8rem;
-
-            &:before {
-                width: 74.1rem;
-                height: 12rem;
-                left: -7.2rem;
-                top: 2rem;
-            }
-        }
     }
 
     &__img {
+        display: none;
         width: 61rem;
         height: 69.7rem;
         margin-left: -5rem;
     }
 }
 
-
-.categories {
-    // .categories__title
+.catalog {
+    &__titles {
+        margin-bottom: 12rem;
+    }
 
     &__title {
-        margin-bottom: 8rem;
         color: rgba($dark, .5);
     }
+}
 
-    // .categories__big-title
 
-    &__big-title {
-        div {
-            margin-left: 24.8rem;
-        }
-
-        span {
-            &:before {
-                width: 74.1rem;
-                height: 12rem;
-                top: -2rem;
-                right: -2.7rem;
-            }
-        }
-    }
-
-    // .categories__items
-
-    &__items {
-        grid-template-columns: repeat(6, 1fr);
-        grid-gap: 4.8rem;
-        margin-top: 12rem;
-    }
-
+.categories {
     // .categories__item
 
     &__item {

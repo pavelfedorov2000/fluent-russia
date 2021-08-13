@@ -1,0 +1,71 @@
+.study-process {
+
+    padding-bottom: 24rem;
+    background-image: url(../img/decor-lines/study-process-decor.svg);
+    background-size: contain;
+    background-position-x: -5.2rem;
+    background-position-y: 3.2rem;
+    background-repeat: no-repeat;
+
+    // .study-process__title
+
+    &__title {
+        margin-bottom: 9rem;
+
+        .decor:before {
+            width: 24.5rem;
+            left: -4.8rem;
+            top: -2rem;
+        }
+    }
+
+    // .study-process__cols
+
+    &__cols {
+        @extend %flex-row;
+        align-items: flex-start;
+    }
+
+    // .study-process__col
+
+    &__col {
+        width: 44.8rem;
+        grid-gap: 4.8rem;
+    }
+
+    // .study-process__card
+
+    &__card {
+        padding: 2.4rem 1.4rem 4rem 2.4rem;
+        grid-template-columns: minmax(max-content, 8.5rem) auto;
+        grid-gap: 0.5rem 0.3rem;
+    }
+
+    // .study-process__card-num
+
+    &__card-num {
+        font-size: 8rem;
+        line-height: 7.7rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        color: $yellow;
+    }
+
+    // .study-process__card-title
+
+    &__card-title {
+        @extend %text-24;
+        font-weight: 500;
+        color: $dark;
+        margin-top: 4rem;
+    }
+
+    // .study-process__card-text
+
+    &__card-text {
+        font-family: 'Inter',
+            sans-serif;
+        @extend %text-16-gray;
+        grid-column: 2 / 3;
+    }
+}

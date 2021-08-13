@@ -6,29 +6,57 @@
 
 <body>
 
-    <div class="wrapper">
+    <div class="wrapper" style="background-color: #FDF5F5;">
+        @@include('../../blocks/modules/header/_header.html')
         @@include('../../blocks/modules/burger/burger-menu/_burger-menu.html')
 
-        <main class="page">
-            @@include('../../blocks/modules/promo-catalog/_promo-catalog.html')
+        <nav class="breadcrumbs">
+            <div class="container">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            База знаний
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            Вебинары
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </nav>
 
-            <!-- @@include('../../blocks/modules/categories/_categories.html') -->
+        <main class="page">
+            <section class="promo-catalog">
+                <div class="container">
+                    <h1 class="page-title">
+                        Каталог курсов
+                    </h1>
+                    <h2 class="section-title promo-catalog__title">
+                        Направления
+                    </h2>
+                    <div class="big-decor-title promo-catalog__big-title grid">
+                        <span class="no-decor">Большой выбор,</span>
+                        <div>
+                            <span class="no-decor">Большие</span>
+                            <span class="decor">возможности</span>
+                        </div>
+                    </div>
+                    @@include('../../blocks/modules/categories/_categories.html')
+                </div>
+            </section>
 
             <div class="ticker">
                 Начните уже сегодня!
             </div>
 
             @@include('../../blocks/modules/catalog/_catalog.html')
-
-            <!--  @@include('../../blocks/modules/action/_action.html')
-
-            @@include('../../blocks/modules/about/_about.html')
-
-            @@include('../../blocks/modules/clients/_clients.html')
-
-            @@include('../../blocks/modules/work-principle/_work-principle.html') -->
-
-            @@include('../../blocks/modules/newsletter/_newsletter.html')
         </main>
 
         @@include('../../blocks/modules/footer/_footer.html')

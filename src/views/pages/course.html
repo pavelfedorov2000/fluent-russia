@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {
+"title": "Страница курса"
+})
+
+<body>
+
+    <div class="wrapper" style="background-color: #FDE7E6">
+        @@include('../../blocks/modules/header/_header.html')
+        @@include('../../blocks/modules/burger/burger-menu/_burger-menu.html')
+
+        <nav class="breadcrumbs">
+            <div class="container">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            Программы обучения
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            Эффективные деловые коммуникации на английском
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <main class="page course">
+            @@include('../../blocks/modules/promo-course/_promo-course.html')
+            @@include('../../blocks/modules/actuality/_actuality.html')
+            @@include('../../blocks/modules/course-auditory/_course-auditory.html')
+            @@include('../../blocks/modules/skills/_skills.html')
+            @@include('../../blocks/modules/study-process/_study-process.html')
+            @@include('../../blocks/modules/course-program/_course-program.html')
+            @@include('../../blocks/modules/course-speaker/_course-speaker.html')
+            @@include('../../blocks/modules/action/_action.html')
+        </main>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+
+        @@include('../../blocks/modules/popups/_popups.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

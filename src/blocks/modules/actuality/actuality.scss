@@ -1,0 +1,7 @@
+.actuality {
+    &__text {
+        font-family: 'Inter', sans-serif;
+        @extend %text-24;
+        color: $dark;
+    }
+}

@@ -4,8 +4,8 @@
 @import './null';
 
 .container {
-    max-width: $container + $gap * 2;
-    padding: 0 $gap;
+    max-width: $container + 2rem * 2;
+    padding: 0 2rem;
     margin: 0 auto;
 }
 
@@ -32,6 +32,22 @@
     &--white {
         background-color: $white;
     }
+
+    &__inner {
+        @extend %flex-row;
+    }
+
+    &__content {
+        width: 94.5rem;
+    }
+
+    &__title {
+        margin-bottom: 8rem;
+    }
+}
+
+.content {
+    width: 94.5rem;
 }
 
 .section-inner {

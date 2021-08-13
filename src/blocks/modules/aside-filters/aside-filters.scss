@@ -13,7 +13,7 @@
         padding-bottom: 3.2rem;
     }
 
-    &__item {
+    &__item+&__item {
         margin-top: 3.2rem;
     }
 

@@ -1,3 +1,42 @@
+.promo-catalog {
+    &__titles {
+        grid-row-gap: 8rem;
+        margin-bottom: 10rem;
+    }
+
+    // .catalog__title
+
+    &__title {
+        color: rgba($dark, .5);
+        margin-bottom: 8rem;
+        //border-bottom: 0.1rem solid $dark-gray;
+        //padding-bottom: 3.7rem;
+    }
+
+    &__big-title {
+        color: $dark;
+        margin-bottom: 10rem;
+
+        div {
+            margin-left: 24.8rem;
+        }
+
+        span {
+            &:before {
+                width: 74.1rem;
+                height: 12rem;
+                top: -1rem;
+                right: -2.7rem;
+            }
+        }
+    }
+
+    &__categories {
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: $gap;
+    }
+}
+
 .catalog {
 
     background-color: $pink-bg;
@@ -12,14 +51,6 @@
 
     &__body {
         width: 94.4rem;
-    }
-
-    // .catalog__title
-
-    &__title {
-        color: rgba($dark, .5);
-        border-bottom: 0.1rem solid $dark-gray;
-        padding-bottom: 3.7rem;
     }
 
     &__item+&__item {
